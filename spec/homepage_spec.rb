@@ -39,7 +39,7 @@ feature 'Testing holiday app' do
     click_button('Absolutely')
     fill_in 'date', with: '19/09/2019'
     click_button('Let\'s go!')
-    expect(page).to have_content('test')
+    expect(page).to have_content('71')
   end
 
 

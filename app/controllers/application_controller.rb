@@ -1,4 +1,5 @@
 require 'sinatra'
+require './app/models/holiday_countdown.rb'
 
 class ApplicationController < Sinatra::Base
   configure do
@@ -19,6 +20,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/calculator' do
+    @holiday = HolidayCountdown.new(params[:date])
     erb(:calculator)
   end
 
